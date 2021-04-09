@@ -7,7 +7,7 @@ To run application (app requires Java 15):
 1. Download TaskJson.jar from out folder
 2. run command: java -cp TaskJSON.jar Main
 
-Alternative run command:
+Alternative run commands:
 1. java -cp TaskJSON.jar Main (urlPosts) (urlUsers)
 2. java -cp TaskJSON.jar Main (urlPosts) (urlUsers) (userID)
 3. java -cp TaskJSON.jar Main (userID)
