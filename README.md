@@ -9,6 +9,6 @@ To run application (app requires Java 15):
 
 Technologies used: 
 <ul>
-  <li>Java 14</li>
+  <li>Java 15</li>
   <li>Jackson Json library</li>
 </ul>
