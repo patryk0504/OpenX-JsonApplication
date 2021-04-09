@@ -8,9 +8,9 @@ To run application (app requires Java 15):
 2. run command: java -cp TaskJSON.jar Main
 
 Alternative run command:
-1. java -cp TaskJSON.jar Main <urlPosts> <urlUsers>
-2. java -cp TaskJSON.jar Main <urlPosts> <urlUsers> <userID>
-3. java -cp TaskJSON.jar Main <userID>
+1. java -cp TaskJSON.jar Main (urlPosts) (urlUsers)
+2. java -cp TaskJSON.jar Main (urlPosts) (urlUsers) (userID)
+3. java -cp TaskJSON.jar Main (userID)
 
 where userID is the user to whom we want to find the nearest user
 
