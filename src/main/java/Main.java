@@ -25,7 +25,21 @@ public class Main {
     public static void main(String[] args) {
         String pathPosts = "https://jsonplaceholder.typicode.com/posts";
         String pathUsers = "https://jsonplaceholder.typicode.com/users";
-        new Main().runProgram(pathPosts,pathUsers);
+        if(args.length == 2) {
+            System.out.println("Posts link: " + args[0]);
+            System.out.println("Users link: " + args[1]);
+            new Main().runProgram(args[0], args[1], 1);
+        }else if(args.length == 1){
+            int id = Integer.parseInt(args[0]);
+            new Main().runProgram(pathPosts,pathUsers, id);
+        }else if(args.length == 3){
+            System.out.println("Posts link: " + args[0]);
+            System.out.println("Users link: " + args[1]);
+            int id = Integer.parseInt(args[2]);
+            new Main().runProgram(args[0],args[1],id);
+        }else{
+            new Main().runProgram(pathPosts,pathUsers, 1);
+        }
     }
 
     /**
@@ -33,7 +47,7 @@ public class Main {
      * @param pathPosts URL path to Posts Json
      * @param pathUsers URL path to User Json
      */
-    public void runProgram(String pathPosts, String pathUsers){
+    public void runProgram(String pathPosts, String pathUsers, int userID){
         ObjectMapper mapper = new ObjectMapper();
 
         String jsonStringPosts = null;
@@ -60,7 +74,7 @@ public class Main {
                 System.out.println(setOfDuplicates);
             System.out.println("-----------------------------------");
             //szukanie uzytkownika w najblizszej odleglosci
-            int id = 1;
+            int id = userID;
             System.out.println("Najblizszy \"sąsiad\" uzytkownika o id = " + id +" -> ");
             searchUser(id);
 
